@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles"></div>
+    <div class="container" id="main-container">
+        <div class="entrance-message" id="entrance-message">
+            I made something small for you...
+        </div>
+        
+        <div class="content hidden" id="content">
+            <div class="cat-wrapper" id="cat-wrapper">
+                <div class="cat-container">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="cat-svg">
+                        <!-- Ears -->
+                        <path d="M 45 85 L 30 20 L 85 60 Z" fill="#ffffff" stroke="#a0c4ff" stroke-width="3" stroke-linejoin="round"/>
+                        <path d="M 155 85 L 170 20 L 115 60 Z" fill="#ffffff" stroke="#a0c4ff" stroke-width="3" stroke-linejoin="round"/>
+                        <!-- Head / Body -->
+                        <path d="M 20 120 C 20 50 180 50 180 120 C 180 180 150 200 100 200 C 50 200 20 180 20 120 Z" fill="#ffffff" stroke="#a0c4ff" stroke-width="3"/>
+                        <!-- Eyes Sad -->
+                        <g id="eyes-sad">
+                            <path d="M 60 100 Q 75 90 90 100" fill="none" stroke="#4a6fa5" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M 110 100 Q 125 90 140 100" fill="none" stroke="#4a6fa5" stroke-width="4" stroke-linecap="round"/>
+                        </g>
+                        <!-- Eyes Happy (Hidden initially) -->
+                        <g id="eyes-happy" class="hidden">
+                            <circle cx="75" cy="95" r="8" fill="#4a6fa5" />
+                            <circle cx="125" cy="95" r="8" fill="#4a6fa5" />
+                            <circle cx="72" cy="92" r="3" fill="#ffffff" />
+                            <circle cx="122" cy="92" r="3" fill="#ffffff" />
+                            <path d="M 60 85 Q 75 75 90 85" fill="none" stroke="#4a6fa5" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M 110 85 Q 125 75 140 85" fill="none" stroke="#4a6fa5" stroke-width="3" stroke-linecap="round"/>
+                        </g>
+                        <!-- Mouth Sad -->
+                        <path id="mouth-sad" d="M 90 120 Q 100 115 110 120" fill="none" stroke="#4a6fa5" stroke-width="3" stroke-linecap="round"/>
+                        <!-- Mouth Happy -->
+                        <path id="mouth-happy" class="hidden" d="M 90 115 Q 100 130 110 115" fill="none" stroke="#4a6fa5" stroke-width="3" stroke-linecap="round"/>
+                        <!-- Blush -->
+                        <ellipse cx="55" cy="115" rx="10" ry="5" fill="#ffc2d1" opacity="0.8"/>
+                        <ellipse cx="145" cy="115" rx="10" ry="5" fill="#ffc2d1" opacity="0.8"/>
+                        <!-- Paws holding heart -->
+                        <circle cx="65" cy="165" r="16" fill="#ffffff" stroke="#a0c4ff" stroke-width="3"/>
+                        <circle cx="135" cy="165" r="16" fill="#ffffff" stroke="#a0c4ff" stroke-width="3"/>
+                    </svg>
+                    
+                    <div class="heart-card" id="heart-card">
+                        <div class="heart-card-inner" id="heart-card-inner">
+                            <div class="heart-text heart-front">SORRY 💙</div>
+                            <div class="heart-text heart-back">THANK YOU 💙</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message-container glass-panel" id="message-container">
+                <p class="main-msg">I’m sorry. I know saying sorry doesn’t automatically fix everything, but I genuinely want to make things right. I’m not asking you to forget what happened. I just hope you’ll give me a chance to show you that I can do better.</p>
+                <p class="sub-msg">I don't want to rush your feelings. I just want to show you that I mean my apology.</p>
+            </div>
+
+            <div class="interactive-card glass-panel" id="interactive-card">
+                <p class="question-text">Dili ko mangayo og instant forgiveness. I just want the chance to make things right.</p>
+                <h2 class="accepted-text">Accepted?</h2>
+                <div class="button-group" id="button-group">
+                    <button id="btn-yes" class="btn btn-yes">💙 YES</button>
+                    <button id="btn-no" class="btn btn-no">🤍 NO</button>
+                </div>
+                <p id="no-reaction-msg" class="hidden reaction-msg">Aww… I’ll still wait.</p>
+            </div>
+            
+            <div class="final-message glass-panel hidden" id="final-message">
+                <p>Thank you for giving me a chance. I promise I’ll let my actions speak louder than my words. I’ll be more careful with your feelings, respect your boundaries, and do my best to make you feel safe and appreciated.</p>
+                <p class="final-sub">No pressure. No rushing. Just me, trying to make things right. 💙</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
